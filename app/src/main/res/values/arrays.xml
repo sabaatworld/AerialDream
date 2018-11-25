@@ -18,6 +18,8 @@
 
     <string-array name="cache_size_values">
         <item>0</item>  <!-- Disabled -->
+        <item>2</item>  <!-- 2GB -->
+        <item>3</item>  <!-- 3GB -->
         <item>4</item>  <!-- 4GB -->
         <item>8</item>  <!-- 8GB -->
         <item>-1</item> <!-- Unlimited -->

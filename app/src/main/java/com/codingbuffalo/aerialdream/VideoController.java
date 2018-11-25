@@ -35,6 +35,11 @@ public class VideoController implements VideoInteractor.Listener, ExoPlayerView.
         String cache = prefs.getBoolean("cache", false) ? "-1" : "0";
         prefs.edit().remove("cache").apply();
 
+        // If user has chosen to hide the loading message, set it to an empty text
+        if(!prefs.getBoolean("show_loading_msg", false)) {
+            binding.loadingView.setText("");
+        }
+
         boolean showClock = prefs.getBoolean("show_clock", true);
         boolean showLocation = prefs.getBoolean("show_location", true);
         boolean showProgress = prefs.getBoolean("show_progress", false);
@@ -95,8 +100,6 @@ public class VideoController implements VideoInteractor.Listener, ExoPlayerView.
                 deactivate.videoView.pause();
                 deactivate.getRoot().setAlpha(1);
                 loadVideo(deactivate, getVideo());
-
-                binding.loadingView.setVisibility(View.GONE);
             }
 
             @Override

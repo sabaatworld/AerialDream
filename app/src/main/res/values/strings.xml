@@ -4,6 +4,7 @@
 
     <string name="category_settings">Settings</string>
 
+    <string name="show_loading_msg">Show loading message</string>
     <string name="show_clock">Show clock</string>
     <string name="show_location">Show location</string>
     <string name="show_progress">Show video progress</string>
@@ -33,6 +34,8 @@
     <string name="cache_size">Video cache size</string>
     <string-array name="cache_size_entries">
         <item>No cache</item>
+        <item>2 GB</item>
+        <item>3 GB</item>
         <item>4 GB</item>
         <item>8 GB</item>
         <item>Unlimited</item>
